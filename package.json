@@ -10,7 +10,11 @@
     "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json",
     "lint": "biome lint --write ./src",
     "format": "biome format --write ./src",
-    "lint:fix": "biome check --write ./src"
+    "lint:fix": "biome check --write ./src",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,svelte}": ["bun run lint:fix"]
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.2",

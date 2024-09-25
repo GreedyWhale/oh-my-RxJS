@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# run lint-staged command
+bunx lint-staged
